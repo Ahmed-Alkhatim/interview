@@ -29,6 +29,9 @@
     display: flex;
     align-items: center;
 }
+.activepurch {
+    border: solid 2px rgb(223, 130, 68);
+}
 .statistic > div{
     display: inline-block;
     

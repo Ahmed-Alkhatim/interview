@@ -4,20 +4,23 @@ import mark from "./images/save.png"
 import half from "./images/half.png"
 import "./purchuase.css"
 import data from "./data"
+import { useState } from "react"
 
 const activeheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "items","payment Status", "Total", "Actions"]
 const inActiveheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "Payment Type", "Total", "PO Status", "Actions"]
 
 const Purchuase = () => {
+    const [page, setPage] = useState("Purchuase Oreders")
+
     return(
         <>
         <div className="purchuase page">
             <div className = "orders">
                 <div className="headers">
-                    <h2>Purchuase Orders</h2>
+                    <h2>{page}</h2>
                 </div>
                 <div className="statistics">
-                    <div className="statistic">
+                    <div className={"statistic " +( page === "View RFQ" && "activepurch")} onClick = { () => setPage("View RFQ") }>
                         <div>
                             <div  className="icon">
                                 <img src={key} alt = "icon"/>
@@ -28,7 +31,7 @@ const Purchuase = () => {
                             <p>View RFQ</p>
                         </div>
                     </div>
-                    <div className="statistic">
+                    <div className={"statistic " + (page === "Purchuase Oreders" && "activepurch")}  onClick = { () => setPage("Purchuase Oreders") }>
                         <div>
                             <div  className="icon">
                                 <img src={key} alt = "icon"/>
@@ -39,7 +42,7 @@ const Purchuase = () => {
                             <p>Purchuase Oreders</p>
                         </div>
                     </div>
-                    <div className="statistic">
+                    <div className={"statistic " + (page === "Saved RFQ" && "activepurch") }  onClick = { () => setPage("Saved RFQ") }>
                         <div>
                             <div  className="icon">
                                 <img src={key} alt = "icon"/>

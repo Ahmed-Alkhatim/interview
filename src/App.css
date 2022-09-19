@@ -42,7 +42,6 @@
   width: 50%;
 }
 .navigator  ul li {
-  color : rgb(108, 94, 94);
   font-size: 14px;
   list-style: none;
   margin-bottom: 20px;
@@ -61,9 +60,11 @@
   height: 100vh;
   box-sizing: border-box;
 }
-.activebar {
+.activebar ul li{
   position: relative;
+  color: #e79e51 !important;
 }
+
 .activebar::after {
   position: absolute;
   right: -3px;

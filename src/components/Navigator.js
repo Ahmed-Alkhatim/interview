@@ -28,8 +28,14 @@ const Navigator = (props) => {
             </div>
             <div className = "navigations">
                 <ul>
-                    <li className={props.page ==="Dashboard" && "activebar"} onClick={ () => props.setPage("Dashboard")}> <img src={dashboard} alt="icon" /><span>Dashboard</span></li>
-                    <li className={props.page ==="Procurement" && "activebar"}  onClick={() => props.setPage("Procurement")}> <img src={procurement} alt="icon" /><span>Procurement </span></li>
+                    <li className={(props.page ==="Dashboard" && "activebar")} 
+                        onClick={ () => props.setPage("Dashboard")}> <img src={props.page ==="Dashboard" ? dashboard1 : dashboard} alt="icon" />
+                        <span style = {{ color : props.page ==="Dashboard" &&  "#e79e51" }}>Dashboard</span>
+                    </li>
+                    <li className={props.page ==="Procurement" && "activebar"}  
+                        onClick={() => props.setPage("Procurement")}> <img src={ props.page ==="Procurement" ? procurement1 : procurement} alt="icon" />
+                        <span style = {{ color : props.page ==="Procurement" &&  "#e79e51" }} >Procurement </span>
+                    </li>
                     <li> <img src={box} alt="icon" /><span>Invoice Center</span></li>
                     <li> <img src={analytics} alt="icon" /><span>Recieving Center</span></li>
                     <li> <img src={packages} alt="icon" /><span>User Managment</span></li>

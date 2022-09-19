@@ -4,7 +4,7 @@ import link from "./images/link.png"
 import down from "./images/down-arrow.png"
 import { VictoryPie, VictoryChart, VictoryGroup, VictoryBar, VictoryArea, VictoryLine } from "victory";
 import "./dashboard.css"
-import { useEffect } from "react";
+
 const Dashboard = () => {
     return(
         <div className="dashboard page">
