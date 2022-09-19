@@ -4,11 +4,11 @@ import check from "../images/check.png"
 import warning from "../images/warning.png"
 import user from "../images/user.png"
 
-const Header = () => {
+const Header = (props) => {
     return(
         <div className="header">
  
-            <div className="searcher">
+            <div className="searcher" style={{ display : props.page !=="Procurement" && "none"}}>
                 <input name = "searcher" value={""} placeholder = "search"/>
             </div>
           

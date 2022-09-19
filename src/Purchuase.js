@@ -54,8 +54,13 @@ const Purchuase = () => {
                 </div>
            
             </div>
+            <div className="tables">
             <Table title = "Inactive" data = {data.inactive} headers = {inActiveheaders}/>
+            </div>
+
+            <div className="tables">
             <Table title = "active" data = {data.active} headers = {activeheaders}/>
+            </div>
         </div>
         </>
     )

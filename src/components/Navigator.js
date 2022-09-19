@@ -1,3 +1,4 @@
+import { useState } from "react"
 import logo from "../images/one.png"
 import box from "../images/box.png"
 import box1 from "../images/box(1).png"
@@ -9,13 +10,19 @@ import analytics from "../images/analytics.png"
 import analytics1 from "../images/analytics(1).png"
 import dashboard from "../images/dashboards.png"
 import dashboard1 from "../images/dashboards(1).png"
-
+import menue from "../images/smenu.png"
+import smenue from "../images/menu.png"
 
 
 
 const Navigator = (props) => {
+    const [display, setDisplay] = useState(true)
     return(
-        <div className="navigator">
+        <>
+        <div className = "menu" onClick={() => setDisplay(!display)}>
+            <img src={display ? smenue : menue}/>
+        </div>
+        <div className="navigator" style={{ display : display ? "block": "none"}}>
             <div className = "logo">
                 <img src = {logo} alt = "logo"/>
             </div>
@@ -30,6 +37,7 @@ const Navigator = (props) => {
                 </ul>
             </div>
         </div>
+        </>
     )
 }
 

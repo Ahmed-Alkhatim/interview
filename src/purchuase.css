@@ -50,8 +50,12 @@
 }
 .purchuase .table {
     margin-top: 50px;
-
 }
+.tables {
+    width: 100%;
+    overflow: scroll;
+}
+
 .purchuase .table .title {
     margin-bottom: 20px;
     padding: 5px;
@@ -69,6 +73,7 @@
     background-color: #e79e51;
 }
 table {
+    width: 100%;
     overflow: scroll;
     font-size: 12px;
     border-collapse: collapse;

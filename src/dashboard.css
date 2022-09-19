@@ -7,7 +7,6 @@
     padding-left: 10px;
 }
 .visualization > div {
-    margin: auto;
     margin-bottom: 50px;
     overflow: hidden;
     position: relative;
@@ -91,4 +90,19 @@
     left: 0;
     position: absolute;
     background-color: rgb(71, 145, 255);
+}
+@media screen and (max-width : 991px){
+    .sales > div { 
+        height : unset;
+        margin: auto;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+    .visualization > div {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .visualization div>:first-child() {
+        height: auto;
+    }
 }
