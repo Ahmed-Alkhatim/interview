@@ -1,4 +1,6 @@
 import key from "../images/key.png"
+import down from "../images/down-arrow.png"
+
 import circle from "../images/circle.png"
 import mark from "../images/save.png"
 import half from "../images/half.png"
@@ -10,7 +12,7 @@ const activeheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "items"
 const inActiveheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "Payment Type", "Total", "PO Status", "Actions"]
 
 const Purchuase = () => {
-    const [page, setPage] = useState("Purchuase Oreders")
+    const [page, setPage] = useState("Purchuase Orders")
 
     return(
         <>
@@ -23,7 +25,7 @@ const Purchuase = () => {
                     <div className={"statistic " +( page === "View RFQ" && "activepurch")} onClick = { () => setPage("View RFQ") }>
                         <div>
                             <div  className="icon">
-                                <img src={key} alt = "icon"/>
+                                <img src={down} alt = "icon"/>
                             </div>
                         </div>
                         <div>
@@ -31,10 +33,10 @@ const Purchuase = () => {
                             <p>View RFQ</p>
                         </div>
                     </div>
-                    <div className={"statistic " + (page === "Purchuase Oreders" && "activepurch")}  onClick = { () => setPage("Purchuase Oreders") }>
+                    <div className={"statistic " + (page === "Purchuase Orders" && "activepurch")}  onClick = { () => setPage("Purchuase Orders") }>
                         <div>
                             <div  className="icon">
-                                <img src={key} alt = "icon"/>
+                                <img src={down} alt = "icon"/>
                             </div>
                         </div>
                         <div>
