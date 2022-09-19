@@ -1,0 +1,44 @@
+
+.visualization {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.visualization > div {
+    position: relative;
+    width:210px;
+    height: 170px;
+    background-color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    font-size: 13px;
+}
+.visualization .title {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+.visualization .title h6 {
+    font-weight: normal;
+    color: #888;
+    font-size: 11px;
+    margin-bottom:4px;
+}
+.visualization .title p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.sales {
+    display: flex;
+    justify-content: space-between;
+}
+.sales > div {
+    width:400px;
+    height: 280px;
+    background-color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    font-size: 13px;
+}

@@ -1,0 +1,82 @@
+
+.orders {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orders .headers {
+    color: #888;
+    font-weight: bold;
+}
+.statistics {
+    display : flex;
+    margin-bottom: 50px;
+}
+.statistic {
+    width:180px;
+    height: 60px;
+    background-color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    font-size: 13px;
+    color : #888;
+    display: flex;
+    align-items: center;
+}
+.statistic > div{
+    display: inline-block;
+    
+}
+.statistic h6 {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.statistic .icon {
+    background-color: #e79e51;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.purchuase .table {
+    margin-top: 50px;
+
+}
+.purchuase .table .title {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.purchuase .table .title::before{
+    content: "";
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.purchuase .active-table::before{
+    background-color : rgb(40, 175, 0)
+}
+.purchuase .inactive-table::before{
+    background-color: #e79e51;
+}
+table {
+    font-size: 13px;
+    border-collapse: collapse;
+}
+table th {
+    font-weight: normal;
+}
+table  td {
+    font-weight: bold;
+}
+table  td, table th{
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width : 100px;
+    text-align: left;
+}
