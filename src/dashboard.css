@@ -3,15 +3,15 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    padding-left: 10px;
 }
 .visualization > div {
     position: relative;
     width:210px;
     height: 170px;
     background-color: #fff;
-    margin-left: 10px;
-    padding: 5px;
-    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    box-shadow: 5px 3px 20px rgba(19, 45, 30, 0.3);
+    border-radius: 5px;
     font-size: 13px;
 }
 .visualization .title {
@@ -34,11 +34,53 @@
     justify-content: space-between;
 }
 .sales > div {
-    width:400px;
+    width:420px;
     height: 280px;
     background-color: #fff;
     margin-left: 10px;
     padding: 5px;
-    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    box-shadow: 5px 3px 20px rgba(19, 45, 30, 0.3);
+    border-radius: 5px;
     font-size: 13px;
+    box-sizing: border-box;
+}
+
+.vector-chart {
+    padding-top: 20px;
+}
+#pie-labels-0, #pie-labels-1 {
+    display: none;
+}
+.line {
+    width: 100%
+}
+.progresses {
+    padding: 20px 20px 0 !important;
+}
+
+
+.progresses .details {
+    margin-bottom: 5px;
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.progresses .details p:first-child {
+}
+.progresses .details p:last-child {
+    color: #888;
+}
+.progress {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+    background-color: rgb(242, 242, 242);
+}
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    left: 0;
+    position: absolute;
+    background-color: rgb(71, 145, 255);
 }

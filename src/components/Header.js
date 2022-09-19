@@ -11,6 +11,25 @@ const Header = () => {
             <div className="searcher">
                 <input name = "searcher" value={""} placeholder = "search"/>
             </div>
+          
+            <div className="icons">
+                <span>
+                    <img src={check} alt = "icon"/>
+                </span>
+                <span>
+                    <img src={chatting}  alt = "icon"/>
+                    <span  className="notify">2</span>
+
+                </span>
+                <span>
+                    <img src={bell}  alt = "icon"/>
+                    <span  className="notify">1</span>
+
+                </span>
+                <span>
+                    <img src={warning}  alt = "icon"/>
+                </span>
+            </div>
             <div className="profile">
                 <div className="user">
                     <h2>Ahmed alkhatim</h2>
@@ -19,20 +38,6 @@ const Header = () => {
                 <div className="img-container">
                     <img src= {user} alt= "profile"/>
                 </div>
-            </div>
-            <div className="icons">
-                <span>
-                    <img src={check}/>
-                </span>
-                <span>
-                    <img src={chatting}/>
-                </span>
-                <span>
-                    <img src={bell}/>
-                </span>
-                <span>
-                    <img src={warning}/>
-                </span>
             </div>
          
         </div>

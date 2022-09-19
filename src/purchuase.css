@@ -15,10 +15,11 @@
 .statistic {
     width:180px;
     height: 60px;
+    border-radius: 5px;
     background-color: #fff;
     margin-left: 10px;
     padding: 5px;
-    box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    box-shadow: 5px 3px 20px rgba(19, 45, 30, 0.3);
     font-size: 13px;
     color : #888;
     display: flex;

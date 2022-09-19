@@ -13,7 +13,7 @@ const Purchuase = () => {
                     <div className="statistic">
                         <div>
                             <div  className="icon">
-                                <img src={key}/>
+                                <img src={key} alt = "icon"/>
                             </div>
                         </div>
                         <div>
@@ -24,7 +24,7 @@ const Purchuase = () => {
                     <div className="statistic">
                         <div>
                             <div  className="icon">
-                                <img src={key}/>
+                                <img src={key} alt = "icon"/>
                             </div>
                         </div>
                         <div>
@@ -35,7 +35,7 @@ const Purchuase = () => {
                     <div className="statistic">
                         <div>
                             <div  className="icon">
-                                <img src={key}/>
+                                <img src={key} alt = "icon"/>
                             </div>
                         </div>
                         <div>

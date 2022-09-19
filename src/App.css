@@ -35,8 +35,8 @@
 
   box-sizing: border-box;
 }
-.navigator  ul {
-
+.navigator  .logo  img{
+  width: 50%;
 }
 .navigator  ul li {
   color : #999;

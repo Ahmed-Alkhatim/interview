@@ -1,5 +1,5 @@
 .navigations {
-    padding-top : 120px;
+    padding-top : 70px;
 }
 .header {
     background-color: rgb(255, 255, 255);
@@ -10,22 +10,41 @@
     top: 0;
     border-bottom: 2px solid rgb(40, 175, 0);
     box-shadow: 0 3px 20px rgba(19, 45, 30, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header > div {
-    margin: 0px 20px;
+    margin: 0px 20px 0px 50px;
     vertical-align: middle;
 }
-.header .searcher {
-    float: left;
+
+
+.header .profile, .header .icons > span{
+    position: relative;
 }
-.header .profile, .header .icons {
-    float: right;
+.notify {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 10px;
+    text-align: center;
+    top: -10px;
+    right: 3px;
+    background-color: rgb(40, 175, 0);
+    color: #fff;
 }
 .profile .img-container {
     width: 30px;
     height: 30px;
     background-color: #cbe2ff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 5px;
 }
 .profile img {
     width: 100%;
@@ -36,19 +55,20 @@
 }   
 .profile p {
     font-size: 10px;
+    text-align: right;
 }
 .profile div {
     display: inline-block;
 }
 .header .searcher {
-    width: 30%;
-
+    width: 50%;
 }
 .header input {
     height: 40px;
     width: 300px;
     border : solid 1px #888;
     border-radius: 7px;
+    text-indent: 10px;
 }
 .header .icons span img{
     margin: 0px 7px;
