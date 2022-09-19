@@ -1,18 +1,23 @@
 import { Navigator } from './components';
+import { useState } from 'react';
 import Purchuase from './Purchuase';
 import Dashboard from './Dashboard';
 import { Header } from "./components"
 
 import './App.css';
-function App() {
+const  App =() => {
+  const [page, setPage] = useState("Dashboard")
   return (
     <div className="App">
-      <Navigator />
       <Content>
         <Header />
-          {/* <Purchuase /> */}
-          <Dashboard />
+          {page === "Dashboard" 
+          ? <Dashboard /> 
+          : <Purchuase />
+        }
       </Content>
+      <Navigator page = {page} setPage = {(page) => setPage(page)}/>
+
     </div>
   );
 }

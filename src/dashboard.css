@@ -2,10 +2,14 @@
 .visualization {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     padding-left: 10px;
 }
 .visualization > div {
+    margin: auto;
+    margin-bottom: 50px;
+    overflow: hidden;
     position: relative;
     width:210px;
     height: 170px;
@@ -32,6 +36,7 @@
 .sales {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .sales > div {
     width:420px;
@@ -43,6 +48,7 @@
     border-radius: 5px;
     font-size: 13px;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .vector-chart {
@@ -52,7 +58,9 @@
     display: none;
 }
 .line {
-    width: 100%
+    width: 131%;
+    padding-top: 36px;
+    margin-left: -33px;
 }
 .progresses {
     padding: 20px 20px 0 !important;

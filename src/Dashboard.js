@@ -25,6 +25,7 @@ data = {
 }
 const Statistic = () => {
     return(
+        
         <div className="dashboard-statistics">
         <div className="statistics" style={{justifyContent : "space-between"}}>
             {
@@ -54,12 +55,16 @@ const Visualization = () => {
    
     return(
         <div className="visualization">
+            {/* Chart */}
+
             <div>
                 <div className="title">
                     <h6>Total salary</h6>
-                    <p>$3,77</p>
-                    <div className="line">
-                    <VictoryArea
+                    <p>$3,77M</p>
+                    
+                </div>
+                <div className="line">
+                <VictoryArea
                     style={{
                         data: { fill: "rgb(255, 214, 226)" }
                       }}
@@ -83,13 +88,14 @@ const Visualization = () => {
                           ]}
                     />
                 </div>
-                </div>
             </div>
+            {/* Chart */}
             <div>
                 <div className="title">
-                    <h6>Total salary</h6>
-                    <p>$3,77</p>
-                    <div>
+                    <h6>Total Balance</h6>
+                    <p>$1442,7</p>
+                </div>
+                <div className="line">
                     <VictoryChart minDomain={{ y: 1 }}
                     >
                     <VictoryLine
@@ -129,12 +135,12 @@ const Visualization = () => {
                         ]}
                     />
                 </VictoryChart>
-                    </div>
                 </div>
             </div>
+            {/* Chart */}
             <div>
                 <div className="title">
-                    <h6>Total salary</h6>
+                    <h6>RFQs</h6>
                     <p>$3,77</p>
                 </div>
                 <div className="vector-chart">
@@ -148,9 +154,10 @@ const Visualization = () => {
                     />
                 </div>
             </div>
+            
             <div>
                 <div className="title">
-                    <h6>Total salary</h6>
+                    <h6>Total </h6>
                     <p>$3,77</p>
                         <VictoryBar
                         style={{
@@ -188,7 +195,7 @@ const Visualization = () => {
 const Sales = () => {
     return(
         <div className="sales">
-            <div>
+            <div className="progresses">
                 <h6>RFQs</h6>
                 <div>
                 <VictoryChart domainPadding={40}>
