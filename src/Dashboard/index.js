@@ -1,7 +1,7 @@
-import key from "./images/key.png"
-import globe from "./images/globe.png"
-import link from "./images/link.png"
-import down from "./images/down-arrow.png"
+import key from "../images/key.png"
+import globe from "../images/globe.png"
+import link from "../images/link.png"
+import down from "../images/down-arrow.png"
 import { VictoryPie, VictoryChart, VictoryGroup, VictoryBar, VictoryArea, VictoryLine } from "victory";
 import "./dashboard.css"
 

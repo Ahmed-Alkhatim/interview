@@ -1,7 +1,7 @@
-import key from "./images/key.png"
-import circle from "./images/circle.png"
-import mark from "./images/save.png"
-import half from "./images/half.png"
+import key from "../images/key.png"
+import circle from "../images/circle.png"
+import mark from "../images/save.png"
+import half from "../images/half.png"
 import "./purchuase.css"
 import data from "./data"
 import { useState } from "react"
@@ -100,12 +100,12 @@ const Table = ({title, data, headers}) => {
                                 </td>
                             )
                         } 
-                        if( header == "payment Status" || header == "PO Status") {
+                        if( header === "payment Status" || header === "PO Status") {
                             return(
                              <td> <div className="status">{item[header]}</div> </td>
                             )
                         }
-                        if(header == "items") {
+                        if(header === "items") {
                             return(
                                 <td>
                                   {Object.values(item["Catg#"]).map( (item) => 
@@ -118,7 +118,7 @@ const Table = ({title, data, headers}) => {
                                 </td>
                             )
                         }
-                        if(header == "Catg#") {
+                        if(header === "Catg#") {
                             return(
                                 <td>
                                 {Object.keys(item[header])[0]+ " +.."}
@@ -131,7 +131,7 @@ const Table = ({title, data, headers}) => {
                         )
                         })
                     return(
-                        <tr className={index ==0 && "first"}>
+                        <tr className={index === 0 && "first"}>
                         {listOfRows}
                         
                         </tr>

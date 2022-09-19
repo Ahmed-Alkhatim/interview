@@ -1,13 +1,10 @@
 import { useState } from "react"
 import logo from "../images/one.png"
 import box from "../images/box.png"
-import box1 from "../images/box(1).png"
 import procurement from "../images/procurement.png"
 import procurement1 from "../images/procurement(1).png"
 import packages from "../images/packages.png"
-import packages1 from "../images/packages(1).png"
 import analytics from "../images/analytics.png"
-import analytics1 from "../images/analytics(1).png"
 import dashboard from "../images/dashboards.png"
 import dashboard1 from "../images/dashboards(1).png"
 import menue from "../images/smenu.png"
@@ -20,7 +17,7 @@ const Navigator = (props) => {
     return(
         <>
         <div className = "menu" onClick={() => setDisplay(!display)}>
-            <img src={display ? smenue : menue}/>
+            <img src={display ? smenue : menue} alt = "icon"/>
         </div>
         <div className="navigator" style={{ display : display ? "block": "none"}}>
             <div className = "logo">
