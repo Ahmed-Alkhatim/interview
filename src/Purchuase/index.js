@@ -6,14 +6,27 @@ import mark from "../images/save.png"
 import half from "../images/half.png"
 import "./purchuase.css"
 import data from "./data"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const activeheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "items","payment Status", "Total", "Actions"]
 const inActiveheaders = ["Reausition", "PO", "Date" , "Catg#", "Supplier", "Payment Type", "Total", "PO Status", "Actions"]
 
-const Purchuase = () => {
+const Purchuase = (props) => {
     const [page, setPage] = useState("Purchuase Orders")
+    const [activeData, setActive] = useState(data.active)
+    const [inactiveData, setinActive] = useState(data.inactive)
+    useEffect( ()=> {
+        if(props.filter) {
+            let activeFiltered = data.active.filter( (data) => data.Supplier.indexOf(props.filter) != -1)
+            let inactiveFiltered = data.inactive.filter( (data) => data.Supplier.indexOf(props.filter) != -1)
+            setActive(activeFiltered)
+            setinActive(inactiveFiltered)
+        } else {
+            setActive(data.active)
+            setinActive(data.inactive)
+        }
 
+    }, [props.filter])
     return(
         <>
         <div className="purchuase page">
@@ -60,11 +73,11 @@ const Purchuase = () => {
            
             </div>
             <div className="tables">
-            <Table title = "Inactive" data = {data.inactive} headers = {inActiveheaders}/>
+            <Table title = "Inactive" data = {inactiveData} headers = {inActiveheaders}/>
             </div>
 
             <div className="tables">
-            <Table title = "active" data = {data.active} headers = {activeheaders}/>
+            <Table title = "active" data = {activeData} headers = {activeheaders}/>
             </div>
         </div>
         </>

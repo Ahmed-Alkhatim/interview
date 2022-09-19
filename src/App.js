@@ -7,13 +7,17 @@ import { Header } from "./components"
 import './App.css';
 const  App =() => {
   const [page, setPage] = useState("Dashboard")
+  const [filter, setFilter] = useState(null)
+  const updateFilter = (searcher) => {
+   setFilter(searcher)
+  }
   return (
     <div className="App">
       <Content>
-        <Header page = {page}/>
+        <Header page = {page} updateFilter = {updateFilter}/>
           {page === "Dashboard" 
           ? <Dashboard /> 
-          : <Purchuase />
+          : <Purchuase filter = {filter}/>
         }
       </Content>
       <Navigator page = {page} setPage = {(page) => setPage(page)}/>

@@ -6,19 +6,27 @@ import user from "../images/user.png"
 import { useState, useEffect } from "react"
 
 const Header = (props) => {
+    const [searcher, setSearcher] = useState()
     const [isNotiDisplayed, setNotifi] = useState(false)
     const [isMesDisplayed, setMess] = useState(false)
+
+    const handleChange  = (e) =>{ 
+        setSearcher(e.target.value) 
+        props.updateFilter(e.target.value)
+    }
+
     useEffect(() => {
         document.getElementsByClassName("page")[0].addEventListener( "click", () =>{
             setNotifi(false)
             setMess(false)
         })
     }, [props.page]);
+
     return(
         <div className="header">
  
             <div className="searcher" style={{ display : props.page !=="Procurement" && "none"}}>
-                <input name = "searcher" value={""} placeholder = "search"/>
+                <input name = "searcher"  placeholder = "search for Supplier" value = {searcher} onChange ={ handleChange }/>
             </div>
           
             <div className="icons">
